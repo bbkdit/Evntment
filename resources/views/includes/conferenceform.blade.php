@@ -1,5 +1,5 @@
 
-                 <div class="col-md-6">
+                 <div class="col-md-8">
                 <h2>Add Confrence</h2><br>
                 @if(Session::has('success'))
                 <div class="alert alert-success">
@@ -37,7 +37,7 @@
 </div>
 <div class="form-group">
   <label for="">Description:</label>
-  <textarea class="form-control" rows="5" id="comment" name="desc" value="{{old('desc')}}"></textarea>
+  <textarea id="txtEditor" class="form-control" rows="5" name="desc" value="{{old('desc')}}"></textarea><br>
 </div>
 <div class="form-group">
   <label for="">city:</label>
@@ -76,7 +76,7 @@
 </form>
 </div>
 
-<div class="col-sm-6"><br><br>
+<div class="col-sm-4"><br><br>
   <h4>Conference list</h4>
   <br>
    <ul class="list-group">

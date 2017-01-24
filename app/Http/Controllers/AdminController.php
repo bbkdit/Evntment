@@ -43,9 +43,9 @@ class AdminController extends Controller
 					 $expnce->price = $request->price;
 					 $expnce->is_negotiable = $request->is_neg;
 					 $expnce->description = $request->desc;
-					 $expnce->city = $request->city;
+					 $expnce->city = "Banglore";
 					 $expnce->area = $request->area;
-					 $expnce->slug_n = str_slug($request->slug_n);
+					 $expnce->slug_n = str_slug($request->name);
 					 $expnce->cat_id = $request->cat_id;
 					 $expnce->save();
 					
@@ -67,28 +67,31 @@ class AdminController extends Controller
 			if($c_id==1){
 				$exp = experience::find($id);
 				$exp->delete();
-				$image = \DB::table('images')->where('item_id','=',$id)->where('cat_id','=',$c_id)->get();
-                $image-delete();
+				Image::where('item_id','=',$id)->where('cat_id','=',$c_id)->delete();
 			}elseif($c_id==2){
 				$exp = Decoration::find($id);
 				$exp->delete();
+				Image::where('item_id','=',$id)->where('cat_id','=',$c_id)->delete();
 			}elseif($c_id==3){
 				$exp = Rooms::find($id);
 				$exp->delete();
+				Image::where('item_id','=',$id)->where('cat_id','=',$c_id)->delete();
 			}elseif($c_id==4){
 				$exp = Confrence::find($id);
 				$exp->delete();
+				Image::where('item_id','=',$id)->where('cat_id','=',$c_id)->delete();
 			}elseif($c_id==5){
 				$exp = Banquet::find($id);
 				$exp->delete();
+				Image::where('item_id','=',$id)->where('cat_id','=',$c_id)->delete();
 			}elseif($c_id==6){
 				$exp = Bachlore::find($id);
 				$exp->delete();
+				Image::where('item_id','=',$id)->where('cat_id','=',$c_id)->delete();
 			}else{
 				return back()->with('success', 'Data deleted sucessfily!');
 			}
-		 
-             return back()->with('success', 'Data deleted sucessfily!');
+		        return back()->with('success', 'Data deleted sucessfily!');
 		}
          
          // show image form ie dropzone.js----
@@ -144,9 +147,9 @@ class AdminController extends Controller
 					 $expnce->price = $request->price;
 					 $expnce->is_negotiable = $request->is_neg;
 					 $expnce->description = $request->desc;
-					 $expnce->city = $request->city;
+					 $expnce->city = "Banglore";
 					 $expnce->area = $request->area;
-					 $expnce->slug_n = str_slug($request->slug_n);
+					 $expnce->slug_n = str_slug($request->name);
 					 $expnce->cat_id = $request->cat_id;
 					 $expnce->save();
 					
@@ -166,13 +169,13 @@ class AdminController extends Controller
 					 $expnce->is_negotiable = $request->is_neg;
 					 $expnce->is_perhead = $request->is_perhead;
 					 $expnce->description = $request->desc;
-					 $expnce->city = $request->city;
+					 $expnce->city = "Banglore";
 					 $expnce->area = $request->area;
 					 $expnce->duration = $request->duration;
 					 $expnce->booking_term = $request->booking_terms;
 					 $expnce->min_capacity = $request->min_capacity;
 					 $expnce->max_capacity = $request->max_capacity;
-					 $expnce->slug_n = str_slug($request->slug_n);
+					 $expnce->slug_n = str_slug($request->name);
 					 $expnce->cat_id = $request->cat_id;
 					 $expnce->save();
 					
@@ -191,13 +194,13 @@ class AdminController extends Controller
 					 $expnce->is_negotiable = $request->is_neg;
 					 $expnce->is_perhead = $request->is_perhead;
 					 $expnce->description = $request->desc;
-					 $expnce->city = $request->city;
+					 $expnce->city = "Banglore";
 					 $expnce->area = $request->area;
 					 $expnce->duration = $request->duration;
 					 $expnce->booking_term = $request->booking_terms;
 					 $expnce->min_capacity = $request->min_capacity;
 					 $expnce->max_capacity = $request->max_capacity;
-					 $expnce->slug_n = str_slug($request->slug_n);
+					 $expnce->slug_n = str_slug($request->name);
 					 $expnce->cat_id = $request->cat_id;
 					 $expnce->save();
 					
@@ -215,13 +218,13 @@ class AdminController extends Controller
 					 $expnce->is_negotiable = $request->is_neg;
 					// $expnce->is_perhead = $request->is_perhead;
 					 $expnce->description = $request->desc;
-					 $expnce->city = $request->city;
+					 $expnce->city = "Banglore";
 					 $expnce->area = $request->area;
 					 $expnce->duration = $request->duration;
 					 $expnce->booking_term = $request->booking_terms;
 					 $expnce->min_capacity = $request->min_capacity;
 					 $expnce->max_capacity = $request->max_capacity;
-					 $expnce->slug_n = str_slug($request->slug_n);
+					 $expnce->slug_n = str_slug($request->name);
 					 $expnce->cat_id = $request->cat_id;
 					 $expnce->save();
 					

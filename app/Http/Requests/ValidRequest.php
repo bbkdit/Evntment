@@ -26,12 +26,9 @@ class ValidRequest extends Request
         return [
             //
                'name' => 'required',
-                'min_price' => 'required|numeric',
-                'max_price' => 'required|numeric',
-                'price'     => 'required|numeric',
-                'city'      => 'required',
-                //'description'=>'required',
-                'area'      => 'required'
+                'price'     => 'numeric',
+                
+                
                 
         ];
     }

@@ -1,5 +1,5 @@
 
-                 <div class="col-md-6">
+                 <div class="col-md-8">
                 <h2>Add Bachlore's party</h2><br>
                 @if(Session::has('success'))
                 <div class="alert alert-success">
@@ -37,7 +37,7 @@
 </div>
 <div class="form-group">
   <label for="">Description:</label>
-  <textarea class="form-control" rows="5" id="comment" name="desc" value="{{old('desc')}}"></textarea>
+  <textarea id="txtEditor" class="form-control" rows="5" name="desc" value="{{old('desc')}}"></textarea><br>
 </div>
 <div class="form-group">
   <label for="">city:</label>
@@ -53,6 +53,7 @@
 </div>
 <div class="form-group">
   <label for="">Booking terms:</label>
+  <textarea id="txtEditor" class="form-control" rows="5" name="booking_terms" value="{{old('booking_terms')}}"></textarea><br>
   <textarea class="form-control" rows="5" id="" name="booking_terms" value="{{old('booking_terms')}}"></textarea>
   <div class="form-group">
   <label for="">minimum capacity:</label>
@@ -76,7 +77,7 @@
 </form>
 </div>
 
-<div class="col-sm-6"><br><br>
+<div class="col-sm-4"><br><br>
   <h4>Bachlore list</h4>
   <br>
    <ul class="list-group">

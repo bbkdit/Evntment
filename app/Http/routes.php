@@ -24,7 +24,7 @@ Route::get('/dashboard', 'AdminController@index');
 Route::get('/experiance', 'HomeController@experianceview');
 Route::get('/experience/single/{id}', 'HomeController@experiencesingleview');
 Route::post('/admin/add', 'AdminController@store');
-Route::get('/admin/add/delete/{c_id}/{id}', 'AdminController@deleteRecord');
+Route::get('/delete/{c_id}/{id}', 'AdminController@deleteRecord');
 
 
 Route::get('/admin/add/{id}', 'AdminController@showform');
