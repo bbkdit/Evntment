@@ -63,7 +63,7 @@
   <h4>{{$deco->name}}</h4>
   <a class="btn btn-success btn-xs" href="{{ url('admin/add/image')}}/{{2}}/{{$deco->id}}"><b style="color:;">Add Images</b></a>
   <a class="btn btn-info btn-xs" href="">Edit</a>
-  <a class="btn btn-danger btn-xs" href="delete/{{$id}}/{{$deco->id}}">Delete</a></li></li>
+  <a class="btn btn-danger btn-xs" href="{{ url('delete')}}/{{$id}}/{{$deco->id}}">Delete</a></li></li>
 
   @endforeach
    </ul>

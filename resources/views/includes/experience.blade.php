@@ -33,7 +33,10 @@
    <textarea id="txtEditor" class="form-control" name="desc" value="{{old('desc')}}"></textarea><br>
 </div>
 <div class="checkbox">
-  <label><input type="checkbox" value="0" name="is_neg"><b>is negotiable</b> </label>
+  <label><input type="hidden" value="0" name="is_neg"></label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="1" name="is_neg"><b>is negotiable</b> </label>
 </div>
 <div class="form-group">
   <label for="">city:</label>
