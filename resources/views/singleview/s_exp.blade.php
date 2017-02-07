@@ -44,7 +44,7 @@
                 <ul>
                 @foreach($image as $img)
                     <li><a class="ns-img" href="{{url($img->file_path)}} "></a></li>
-                    @endforeach
+                 @endforeach
                 </ul>
                 <div class="fs-icon" title="Expand/Close"></div>
             </div> 
@@ -56,16 +56,7 @@
                     <li>
                         <a class="thumb" href=" {{url($img->file_path)}}"></a>
                     </li>
-                    @endforeach
-                    <li>
-                        <a class="thumb" href=" evmng/img/image1.jpg"></a>
-                    </li>
-                   <li>
-                        <a class="thumb" href=" evmng/img/image1.jpg"></a>
-                    </li>
-                    <li>
-                        <a class="thumb" href=" evmng/img/4.jpg"></a>
-                    </li>
+                 @endforeach
                 </ul>
             </div>
         </div>
@@ -119,15 +110,7 @@
       </div>
       <div class="col-md-8 description mar-t-30">
         <h3 class="mar-b-20 title"> Description </h3>
-        Candle light dinner in a private place at a 5 star hotel
-        <ul>
-          <li> Standard cake</li>
-          <li> Table decoration with rose petals</li>
-          <li> 2 glass of wine</li>
-          <li> 5 course dinner</li>
-          <li> Private butler to serve</li>
-        </ul>
-        <br><br><br>
+          {!! html_entity_decode($exp->description) !!}
       </div>
       <div class="clearfix"></div>
     </div>  

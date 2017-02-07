@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -35,22 +36,20 @@ class AdminController extends Controller
 
           // save experience data into database--
 		public function store(ValidRequest $request){
-
                      $expnce = new experience;
 					 $expnce->name = $request->name;
 					 $expnce->min_price = $request->min_price;
 					 $expnce->max_price = $request->max_price;
 					 $expnce->price = $request->price;
 					 $expnce->is_negotiable = $request->is_neg;
-					 $expnce->description = $request->desc;
+					 $expnce->description = $request->description;
 					 $expnce->city = "Banglore";
 					 $expnce->area = $request->area;
 					 $expnce->slug_n = str_slug($request->name);
 					 $expnce->cat_id = $request->cat_id;
-					 $expnce->save();
-					
+			
+					$expnce->save();
 					return back()->with('success', 'Data inserted sucessfily!');
-					
 		}
 
          // show required form by category id---
@@ -120,7 +119,7 @@ class AdminController extends Controller
 			$file =  $request->file('file');
 			$file_count = count($file);// start count how many uploaded
 			$destinationPath = 'images'; // upload folder in public directory
-			$filename = $file->getClientOriginalName();
+			$filename =  str_random(4).$file->getClientOriginalName();
 			$upload_success = $file->move($destinationPath, $filename);
 
 						// save into database

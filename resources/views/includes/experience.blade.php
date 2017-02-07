@@ -1,19 +1,18 @@
+<div class="col-sm-8">
+   <h2>Add Experience</h2><br>
+    @if(Session::has('success'))
+       <div class="alert alert-success">
+          {{ Session::get('success') }}
+        </div>
+    @endif
 
-                 <div class="col-sm-8">
-                <h2>Add Experience</h2><br>
-                @if(Session::has('success'))
-                <div class="alert alert-success">
-                   {{ Session::get('success') }}
-               </div>
-                @endif
 
-
- <form method="post" action="{{ url('/admin/add') }}">
+ <form method="post" action="{{ url('/admin/add') }}" role="form">
  <input type="hidden" name="_token" value="{{ csrf_token() }}">
  <input type="hidden" id="cat_id" name="cat_id" value="1">
  
  <div class="form-group">
-  <label for="usr">Name:</label>
+  <label for="name">Name:</label>
   <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}">
 </div>
 <div class="form-group">
@@ -26,11 +25,12 @@
 </div>
 <div class="form-group">
   <label for="pwd">price:</label>
-  <input type="" class="form-control" id="" name="price" value="{{old('price')}}">
+  <input type="text" class="form-control" id="" name="price" value="{{old('price')}}">
 </div>
 <div class="form-group">
-  <label for="">Description:</label>
-   <textarea id="txtEditor" class="form-control" name="desc" value="{{old('desc')}}"></textarea><br>
+  <label for="description">Description hello:</label>
+  <textarea id="description" class="form-control vertical-resize" name="description" rows="4" placeholder="enter description..."
+          data-val="{{ old('description') }}"></textarea><br>
 </div>
 <div class="checkbox">
   <label><input type="hidden" value="0" name="is_neg"></label>

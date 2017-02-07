@@ -49,7 +49,7 @@
 <script src="{{url('js/editor.js')}}"></script>
 <script type="text/javascript">
 $(document).ready( function() {
-$("#txtEditor").Editor();                    
+$("#description").Editor();
 });
 </script>
 @endsection

@@ -1,0 +1,1 @@
+<a href="{{ route('book-now') }}" class="btn btn-lg btn-book-now" target="_blank"> Book Now </a>
